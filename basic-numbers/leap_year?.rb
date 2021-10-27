@@ -34,7 +34,35 @@ def leap_year?(year)
   false 
 end
 
-p leap_year?(1997) # => false
-p leap_year?(1996) # => true 
-p leap_year?(2000) # => true 
-p leap_year?(1900) # => false 
+p leap_year?(1997)  # => false
+p leap_year?(1996)  # => true 
+p leap_year?(2000)  # => true 
+p leap_year?(1900)  # => false 
+p leap_year?(400)   # => true
+p leap_year?(250)   # => false
+p leap_year?(1800)  # => false 
+p leap_year?(1703)  # => false
+p leap_year?(1911)  # => false
+p leap_year?(1912)  # => true 
+
+
+def leap_year?(year)
+  if (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)
+    return true
+  else 
+    false 
+  end     
+end 
+
+puts "-------"
+
+p leap_year?(1997)  # => false
+p leap_year?(1996)  # => true 
+p leap_year?(2000)  # => true 
+p leap_year?(1900)  # => false 
+p leap_year?(400)   # => true
+p leap_year?(250)   # => false
+p leap_year?(1800)  # => false 
+p leap_year?(1703)  # => false
+p leap_year?(1911)  # => false
+p leap_year?(1912)  # => true 

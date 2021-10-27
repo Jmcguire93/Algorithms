@@ -35,8 +35,6 @@ def fibonacci(n)
   end 
   
   num1
-
-
 end 
 
 p fibonacci(9) 
