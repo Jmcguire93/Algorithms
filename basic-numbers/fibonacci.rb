@@ -1,73 +1,55 @@
-# def fibonacci(length)
-#   if length == 0 
-#     return []
-#   elsif length == 1
-#     return [1]
-#   end
-  
-#   seq = [1, 1]
-#   while seq.length < length 
-#     last_ele = seq[-1]
-#     second_to_last = seq[-2]
-#     next_ele = last_ele + second_to_last
-#     seq << next_ele 
-#   end
-  
-#   return seq
-# end
+# Write a function that gives the Nth number of the Fibonacci Sequence. The Fibonacci sequence begins with 0 and 1, and every number thereafter is the sum of the previous two numbers. So the sequence goes like this:
 
-# p fibonacci(0) # => []
-# puts
-# p fibonacci(1) # => [1]
-# puts
-# p fibonacci(3) 
-# puts
-# p fibonacci(6) # => [1, 1, 2, 3, 5, 8]
-# puts
-# p fibonacci(8) # => [1, 1, 2, 3, 5, 8, 13, 21]
-# puts
-# p fibonacci(9) # => [1, 1, 2, 3, 5, 8, 13, 21]
-# puts
+# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, and so on until infinity...
 
+# Input: 9
+# Output: 21 (as this is the 9th number of the Fibonacci Sequence)
 
-def fibonacci(n)
-  if n == 0 
-    return 0
-  elsif n == 1
-    return 1
-  end
-  
+def fibonacci(n)  
   seq = [0, 1]
-  while seq.length <= n 
+
+  while seq.length < n 
     last_ele = seq[-1]
     second_to_last = seq[-2]
     next_ele = last_ele + second_to_last
     seq << next_ele 
   end
   
-  return seq.last
+  return seq.last    
 end
 
+p fibonacci(9) # => 21
 
-p fibonacci(0) # => 0
-puts
-p fibonacci(1) # => 1
-puts
-p fibonacci(2) # => 1
-puts
-p fibonacci(3) # => 2
-puts
-p fibonacci(4) # => 3
-puts
-p fibonacci(5) # => 5
-puts
-p fibonacci(6) # => 8
-puts
-p fibonacci(7) # => 13
-puts
-p fibonacci(8) # => 21
-puts
-p fibonacci(9) # => 34
-puts
-p fibonacci(10) # => 55
 
+## The sequence 
+
+def fibonacci(n)
+  if n == 0 
+    return []
+  elsif n == 1
+    return [1]
+  end
+  
+  seq = [0, 1]
+  while seq.length < n 
+    last_ele = seq[-1]
+    second_to_last = seq[-2]
+    next_ele = last_ele + second_to_last
+    seq << next_ele 
+  end
+  
+  return seq
+end
+
+p fibonacci(0) # => []
+puts
+p fibonacci(1) # => [1]
+puts
+p fibonacci(3) # => [0, 1, 1]
+puts
+p fibonacci(6) # => [1, 1, 2, 3, 5]
+puts
+p fibonacci(8) # => [1, 1, 2, 3, 5, 8, 13]
+puts
+p fibonacci(9) # => [1, 1, 2, 3, 5, 8, 13, 21]
+puts
