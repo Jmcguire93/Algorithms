@@ -5,6 +5,8 @@
 # Input: 9
 # Output: 21 (as this is the 9th number of the Fibonacci Sequence)
 
+# Attempt 1
+
 def fibonacci(n)  
   seq = [0, 1]
 
@@ -19,6 +21,27 @@ def fibonacci(n)
 end
 
 p fibonacci(9) # => 21
+
+puts "-------"
+
+
+# Attempt 2
+
+def fibonacci(n)
+  num1, num2 = [0,1]
+
+  (n - 1).times do 
+    num1, num2 = num2, num1+num2
+  end 
+  
+  num1
+
+
+end 
+
+p fibonacci(9) 
+
+puts "-------"
 
 
 ## The sequence 
