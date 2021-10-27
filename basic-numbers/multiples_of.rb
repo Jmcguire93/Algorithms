@@ -2,6 +2,9 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
+
+## Each Loop
+
 def mulitples_of(num)
   sum = 0
 
@@ -13,6 +16,28 @@ def mulitples_of(num)
 
   sum
 end
+
+p mulitples_of(10)    # => 23
+p mulitples_of(1000)  # => 233168
+
+
+puts "-------"
+
+## While Loop
+
+def multiples_of(num)
+  sum = 0
+  index = 0
+  
+  while index < num 
+    if (index % 3 == 0) || (index % 5 == 0)
+      sum += index
+    end 
+    index += 1
+  end  
+
+  sum
+end 
 
 p mulitples_of(10)    # => 23
 p mulitples_of(1000)  # => 233168
