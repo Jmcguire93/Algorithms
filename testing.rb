@@ -150,3 +150,26 @@ call method and return 14
 # end
 
 # p counter_hash(["m", "e", "g", "h", "o", "w", "e", "e"])  # => {"m" => 1, "e" => 2, "g" => 1, "h" => 1, "o" => 1, "w" => 1}
+
+
+# def range1(num1, num2)
+#   new_arr = []
+#   num1.upto(num2).each do |num|
+#     new_arr << num
+#   end
+#   new_arr 
+# end
+
+# p range1(1, 10)
+
+# puts "-----"
+
+# def range1(num1, num2)
+#   new_arr = []
+#   num2.downto(num1).each do |num|
+#     new_arr << num
+#   end
+#   new_arr 
+# end
+
+# p range1(1, 10)
