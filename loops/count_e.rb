@@ -18,3 +18,23 @@ end
 p count_e("movie")      # 1
 p count_e("excellent")  # 3
 p count_e("incredible") # 2
+
+#While Loop
+
+def count_e(string)
+  count = 0 
+  i = 0
+
+  while i < string.length 
+    char = string[i]
+    if char == "e"
+      count += 1
+    end
+    i += 1
+  end
+  count 
+end
+
+p count_e("movie")      # 1
+p count_e("excellent")  # 3
+p count_e("incredible") # 2
