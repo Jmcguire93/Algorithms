@@ -57,4 +57,3 @@ p is_valid_name?("Kush Patel")       # => true
 p is_valid_name?("Daniel")           # => false
 p is_valid_name?("Robert Downey Jr") # => true
 p is_valid_name?("ROBERT DOWNEY JR") # => false
-
