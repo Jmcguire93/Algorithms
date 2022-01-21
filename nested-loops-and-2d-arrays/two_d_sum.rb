@@ -31,7 +31,6 @@ def two_d_sum(arr)
   end
 
   sum
-  
 end
 
 array1 = [
