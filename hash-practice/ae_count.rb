@@ -15,3 +15,19 @@ end
 
 p ae_count("everyone can program") #=> {"a"=>2, "e"=>3}
 p ae_count("keyboard") #=> {"a"=>1, "e"=>1}
+
+###
+
+def ae_count(string)
+  count = Hash.new(0)               ## Still solves ae_count, but terminal output order is different
+
+  string.each_char do |char|
+    if char == "a" || char == "e"
+      count[char] += 1 
+    end
+  end 
+  count 
+end
+
+p ae_count("everyone can program") #=> {"a"=>2, "e"=>3}
+p ae_count("keyboard") #=> {"a"=>1, "e"=>1}
