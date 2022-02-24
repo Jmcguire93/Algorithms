@@ -6,7 +6,7 @@ def most_vowels(sentence)
   words = sentence.split(" ")
   
   words.each { |word| count[word] = count_vowels(word) }
-  sorted = count.sort_by { |k, v| v }
+  sorted = count.sort_by { |_k, v| v }
   return sorted[-1][0]
 end
 
